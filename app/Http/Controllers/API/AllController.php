@@ -32,9 +32,7 @@ class AllController extends Controller
     public function products()
     {
         try {
-            $products = Product::select([
-                'id', 'img_url', 'title', 'price', 'is_discount', 'after_discount'
-            ])->get();
+            $products = Product::all();
 
             return response()->json([
                 'success' => true,
