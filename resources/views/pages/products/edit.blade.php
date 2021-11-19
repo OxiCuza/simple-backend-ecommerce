@@ -77,8 +77,8 @@
                         </div>
                     </div>
                     <div class="mb-5 d-none" id="wrapper-discount">
-                        <label class="form-label" for="sku-product">Price after discount</label>
-                        <input class="form-control" id="sku-product" name="after_discount" type="number" value="{{$product->after_discount}}">
+                        <label class="form-label" for="after-discount">Price after discount</label>
+                        <input class="form-control" id="after-discount" name="after_discount" type="number" value="{{$product->after_discount}}">
                     </div>
                     <div class="col-12">
                         <button class="btn btn-primary" type="submit">Submit</button>
@@ -98,13 +98,22 @@
     <script>
         $(document).ready(function () {
             let target = $('#wrapper-discount');
+            let input = $('#after-discount');
+            let isDiscount = `{{$product->is_discount}}`;
+
             $('input[type=radio]').on('change', function () {
                 if (this.value == 1) {
-                    target.toggleClass('d-none');
+                    target.removeClass('d-none');
+                    $(input).attr('disabled', false);
                 } else {
-                    target.toggleClass('d-none');
+                    target.addClass('d-none');
+                    $(input).attr('disabled', true);
                 }
-            })
+            });
+
+            if (isDiscount == 1) {
+                target.removeClass('d-none');
+            }
         });
     </script>
 

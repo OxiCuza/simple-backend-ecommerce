@@ -122,6 +122,10 @@ class ProductsController extends Controller
                 $data['img_url'] = url('/storage/'.$img_path);
             }
 
+            if (!$data['is_discount']) {
+                $data['after_discount'] = null;
+            }
+
             $product = $product->fill($data);
             $product->save();
 
