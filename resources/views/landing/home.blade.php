@@ -15,7 +15,7 @@
                         pedesaan.
                     </p>
                     <div class="intro-button mx-auto">
-                        <a class="btn btn-primary btn-xl" href="http://www.youtube.com">Visit Us Today!</a>
+                        <a class="btn btn-primary btn-xl" target="_blank" href="https://www.google.com/maps/place/Kantor+Kepala+Desa+Kenanten/@-7.4985174,112.4430541,17z/data=!3m1!4b1!4m5!3m4!1s0x2e780d69349e6507:0xf21b7bc20186b082!8m2!3d-7.4985231!4d112.4452939">Visit Us Today!</a>
                     </div>
                 </div>
             </div>
