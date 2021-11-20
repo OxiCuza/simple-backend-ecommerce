@@ -22,3 +22,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
    Route::get('account/{id}/detail', [\App\Http\Controllers\Admin\ProfileController::class, 'index'])->name('profile.index');
    Route::patch('account/{id}/update', [\App\Http\Controllers\Admin\ProfileController::class, 'update'])->name('profile.update');
 });
+
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/', function () { return view('landing.home'); });
+    Route::get('/about', function () { return view('landing.about'); });
+    Route::get('/products', function () { return view('landing.products'); });
+    Route::get('/store', function () { return view('landing.store'); });
+});
