@@ -12,6 +12,11 @@ Welcome to our simple backend ecommerce, where managing your products and catego
 **Server:** PHP7, Laravel, MySQL, Node v14
 
 
+## Screenshots
+
+![App Screenshot](https://oxicuza.github.io/assets/img/work/work-3.png)
+
+
 ## Features
 
 - Landing Page
@@ -77,11 +82,6 @@ Start the server
 ```bash
   php artisan serve
 ```
-
-
-## Screenshots
-
-![App Screenshot](https://oxicuza.github.io/assets/img/work/work-3.png)
 
 
 ## Feedback
